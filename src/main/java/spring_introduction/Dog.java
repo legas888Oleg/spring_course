@@ -7,7 +7,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-@Scope("singleton")
+@Scope("prototype")
 public class Dog implements Pet {
 //    private String name;
     public Dog() {
@@ -19,12 +19,12 @@ public class Dog implements Pet {
         System.out.println("Гав-гав");
     }
 
-    @PostConstruct
+//    @PostConstruct
     public void init(){
         System.out.println("Class Dog: init method");
     }
 
-    @PreDestroy
+//    @PreDestroy
     public void destroy(){
         System.out.println("Class Dog: destroy method");
     }
