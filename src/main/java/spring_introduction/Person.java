@@ -9,7 +9,17 @@ public class Person {
     private String surname;
     private int age;
 
+//    public Person() {}
+
+//     pet -> setPet()
+//    @Autowired
+//    public Person(Pet pet) {
+//        this.pet = pet;
+//    }
+
+    @Autowired
     public void setPet(Pet pet) {
+        System.out.println("Class Person setPet");
         this.pet = pet;
     }
 
@@ -27,14 +37,6 @@ public class Person {
 
     public int getAge() {
         return age;
-    }
-
-//    public Person() {}
-
-    // pet -> setPet()
-    @Autowired
-    public Person(Pet pet) {
-        this.pet = pet;
     }
 
     public void callPet(){
