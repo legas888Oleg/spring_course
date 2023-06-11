@@ -1,11 +1,9 @@
 package spring_introduction;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@PropertySource("classpath:my.properties")
 public class MyConfig {
     @Bean
     @Scope("singleton")

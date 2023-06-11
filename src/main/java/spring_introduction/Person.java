@@ -1,9 +1,13 @@
 package spring_introduction;
 
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Person {
     private Pet pet;
+    @Value("${person.age}")
     private int age;
+    @Value("${person.surname}")
     private String surname;
 
 //    public Person() {}
