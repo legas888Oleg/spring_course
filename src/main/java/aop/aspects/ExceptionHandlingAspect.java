@@ -16,4 +16,12 @@ public class ExceptionHandlingAspect {
                 " попытке получить книгу/журнал");
     }
 
+    @Before("aop.aspects.MyPointcuts.allAddMethods()")
+    public void beforeAddExceptHandlingAdvance(){
+        System.out.println("beforeAddExceptHandlingAdvance: ловим/обрабатываем исключения при" +
+                " попытке добавить книгу/журнал");
+        System.out.println("-----------------------------------------------------------------" +
+                "----------------------------------------------------------------------------");
+    }
+
 }

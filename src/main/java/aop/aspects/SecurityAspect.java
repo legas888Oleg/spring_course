@@ -15,4 +15,10 @@ public class SecurityAspect {
         System.out.println("beforeGetSecurityAdvance: проверка прав доступа для получения книги/журнала");
     }
 
+    @Before("aop.aspects.MyPointcuts.allAddMethods()")
+    public void beforeAddSecurityAdvance(){
+        System.out.println("beforeAddSecurityAdvance: проверка прав доступа для добавления книги/журнала");
+        System.out.println("----------------------------------------------------------------------------");
+    }
+
 }
