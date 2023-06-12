@@ -2,5 +2,5 @@ package aop;
 
 
 public abstract class AbstractLibrary {
-    abstract void getBook();
+//    abstract void getBook();
 }
