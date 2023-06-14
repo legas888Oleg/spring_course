@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class Test2 {
+public class Test3 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -18,12 +18,12 @@ public class Test2 {
             Session session = factory.getCurrentSession();
             session.beginTransaction();
 
-            List<Employee> employees = session.createQuery("from Employee" + " where name = 'Oleg' AND salary>65000")
-                    .getResultList();
+//            Employee emp = session.get(Employee.class, 1);
+//            System.out.println(emp);
+//            emp.setSalary(40000);
+//            System.out.println(emp);
 
-            for (Employee employee : employees) {
-                System.out.println(employee);
-            }
+            session.createQuery("update Employee set salary=1000 " + "where id>=5").executeUpdate();
 
             session.getTransaction().commit();
             System.out.println("Done!");
