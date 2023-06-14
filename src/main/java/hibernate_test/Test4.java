@@ -5,9 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
-public class Test3 {
+public class Test4 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -18,12 +16,11 @@ public class Test3 {
             Session session = factory.getCurrentSession();
             session.beginTransaction();
 
-//            Employee emp = session.get(Employee.class, 1);
-//            System.out.println(emp);
-//            emp.setSalary(40000);
-//            System.out.println(emp);
+//            Employee emp = session.get(Employee.class, 12);
+//            session.remove(emp);
 
-            session.createQuery("update Employee set salary=1000 " + "where id>=5").executeUpdate();
+            session.createQuery("delete Employee " + "where name = 'Игорь'").executeUpdate();
+
 
             session.getTransaction().commit();
             System.out.println("Done!");
