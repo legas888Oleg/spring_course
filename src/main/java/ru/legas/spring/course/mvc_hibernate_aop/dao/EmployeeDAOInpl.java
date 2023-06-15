@@ -4,11 +4,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ru.legas.spring.course.mvc_hibernate_aop.entity.Employee;
 
 import java.util.List;
 
+@Repository
 public class EmployeeDAOInpl implements EmployeeDAO {
     @Autowired
     private SessionFactory sessionFactory;
