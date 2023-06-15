@@ -9,6 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
+<head>
+    <meta charset="UTF-8">
+</head>
+
 <body>
 
 <h2>Уважаемый сотрудник! Добро пожаловать.</h2>
@@ -22,6 +26,7 @@ Name: ${employee.name}<br>
 Surname: ${employee.surname}<br>
 Salary: ${employee.salary}<br>
 Phone number: ${employee.phoneNumber}<br>
+Email: ${employee.email}<br>
 Department: ${employee.department}<br>
 Your car: ${employee.carBrand}
 Language(s):

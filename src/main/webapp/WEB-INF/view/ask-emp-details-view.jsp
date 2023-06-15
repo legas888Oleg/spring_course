@@ -10,6 +10,10 @@
 <!Doctype html>
 <html>
 
+<head>
+    <meta charset="UTF-8">
+</head>
+
 <body>
 
 <form:form action="showDetails" modelAttribute="employee">
@@ -24,6 +28,9 @@
     <br><br>
     Phone number <form:input path="phoneNumber"/>
     <form:errors path="phoneNumber"/>
+    <br><br>
+    Phone number <form:input path="email"/>
+    <form:errors path="email"/>
     <br><br>
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>

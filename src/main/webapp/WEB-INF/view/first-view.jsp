@@ -9,6 +9,10 @@
 <!Doctype html>
 <html>
 
+<head>
+    <meta charset="UTF-8">
+</head>
+
 <body>
 
 <h2>I wish you luck in Spring MVC learning!!</h2>
