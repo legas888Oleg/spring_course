@@ -20,7 +20,8 @@
 Name: ${employee.name}<br>
 Surname: ${employee.surname}<br>
 Salary: ${employee.salary}<br>
-Department: ${employee.department}
+Department: ${employee.department}<br>
+Your car: ${employee.carBrand}
 
 </body>
 </html>
