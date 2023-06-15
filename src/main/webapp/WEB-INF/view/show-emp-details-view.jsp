@@ -6,16 +6,17 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!Doctype html>
 <html>
 
 <body>
 
-<h2>I wish you luck in Spring MVC learning!!</h2>
+<h2>Уважаемый сотрудник! Добро пожаловать.</h2>
+
 <br>
 <br>
-<a href="askDetails">Введите информацию о себе</a>
+<br>
+
+Ваше имя: ${param.employeeName}
 
 </body>
-
 </html>
