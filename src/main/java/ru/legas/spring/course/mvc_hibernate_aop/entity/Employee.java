@@ -1,5 +1,6 @@
 package ru.legas.spring.course.mvc_hibernate_aop.entity;
 
+
 import javax.persistence.*;
 
 @Entity
