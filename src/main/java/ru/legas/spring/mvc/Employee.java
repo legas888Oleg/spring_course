@@ -11,6 +11,8 @@ public class Employee {
     private Map<String,String> departments;
     private String carBrand;
     private Map<String,String> carBrends;
+    private String[] languages;
+    private Map<String,String> languages_values;
 
     public Employee() {
         departments = new HashMap<>();
@@ -22,6 +24,11 @@ public class Employee {
         carBrends.put("BMW", "BMW");
         carBrends.put("Audi", "Audi");
         carBrends.put("Mercedes-Benz", "Mercedes-Benz");
+
+        languages_values =new HashMap<>();
+        languages_values.put("English", "EN");
+        languages_values.put("Deutch", "DE");
+        languages_values.put("French", "FR");
     }
 
     public String getName() {
@@ -80,6 +87,22 @@ public class Employee {
         this.carBrends = carBrends;
     }
 
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public Map<String, String> getLanguages_values() {
+        return languages_values;
+    }
+
+    public void setLanguages_values(Map<String, String> languages_values) {
+        this.languages_values = languages_values;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -89,4 +112,5 @@ public class Employee {
                 ", department='" + department + '\'' +
                 '}';
     }
+
 }
