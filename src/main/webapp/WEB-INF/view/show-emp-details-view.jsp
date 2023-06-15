@@ -17,7 +17,9 @@
 <br>
 
 <%--Ваше имя: ${param.employeeName}--%>
-Ваше имя: ${nameAttribute}
+Name: ${employee.name}<br>
+Surname: ${employee.surname}<br>
+Salary: ${employee.salary}<br>
 
 </body>
 </html>
