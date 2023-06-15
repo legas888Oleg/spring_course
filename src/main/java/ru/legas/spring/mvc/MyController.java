@@ -2,9 +2,12 @@ package ru.legas.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.validation.Valid;
 
 
 @Controller
@@ -30,12 +33,14 @@ public class MyController {
 
     @RequestMapping("/showDetails")
     public String showEmployeeDetails(
-            @ModelAttribute("employee") Employee emp){
+            @Valid
+            @ModelAttribute("employee") Employee emp, BindingResult bindingResult){
 
-        emp.setName("Mr. " + emp.getName());
-        emp.setSurname(emp.getSurname() + "!");
-        emp.setSalary(emp.getSalary() + 500);
+        if(bindingResult.hasErrors()){
+            return "ask-emp-details-view";
+        } else {
 
-        return "show-emp-details-view";
+            return "show-emp-details-view";
+        }
     }
 }
