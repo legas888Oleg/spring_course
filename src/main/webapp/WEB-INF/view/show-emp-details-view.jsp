@@ -21,6 +21,7 @@
 Name: ${employee.name}<br>
 Surname: ${employee.surname}<br>
 Salary: ${employee.salary}<br>
+Phone number: ${employee.phoneNumber}<br>
 Department: ${employee.department}<br>
 Your car: ${employee.carBrand}
 Language(s):
