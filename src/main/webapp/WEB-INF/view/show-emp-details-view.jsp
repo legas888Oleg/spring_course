@@ -16,7 +16,8 @@
 <br>
 <br>
 
-Ваше имя: ${param.employeeName}
+<%--Ваше имя: ${param.employeeName}--%>
+Ваше имя: ${nameAttribute}
 
 </body>
 </html>
