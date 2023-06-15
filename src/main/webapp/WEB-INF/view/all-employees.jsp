@@ -41,5 +41,7 @@
         </tr>
     </c:forEach>
 </table>
+<br>
+<input type="submit" value="Add" onclick="window.location.href='addNewEmployee'" style="font-size: 24px">
 </body>
 </html>
