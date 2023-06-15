@@ -11,11 +11,21 @@
 <html>
 <head>
     <title>All employees</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <h2>All employees</h2>
 <br>
-<table>
+<table style="font-size: 24px">
     <tr>
         <th>Name</th>
         <th>Surname</th>
