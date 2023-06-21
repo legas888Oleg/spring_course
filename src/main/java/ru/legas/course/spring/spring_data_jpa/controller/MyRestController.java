@@ -2,8 +2,8 @@ package ru.legas.course.spring.spring_data_jpa.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.legas.course.spring.springboot.entity.Employee;
-import ru.legas.course.spring.springboot.service.EmployeeService;
+import ru.legas.course.spring.spring_data_jpa.entity.Employee;
+import ru.legas.course.spring.spring_data_jpa.service.EmployeeService;
 
 import java.util.List;
 

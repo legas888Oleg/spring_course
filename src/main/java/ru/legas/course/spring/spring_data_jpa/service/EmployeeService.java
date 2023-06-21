@@ -1,7 +1,7 @@
 package ru.legas.course.spring.spring_data_jpa.service;
 
 
-import ru.legas.course.spring.springboot.entity.Employee;
+import ru.legas.course.spring.spring_data_jpa.entity.Employee;
 
 import java.util.List;
 
