@@ -1,5 +1,6 @@
 package ru.legas.course.spring.spring_data_jpa.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.legas.course.spring.spring_data_jpa.entity.Employee;
@@ -9,8 +10,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@AllArgsConstructor
 public class MyRestController {
-    @Autowired
     private EmployeeService employeeService;
 
     @GetMapping("/employees")
@@ -46,5 +47,12 @@ public class MyRestController {
         employeeService.deleteEmployee(id);
 
         return "Employee with ID = " + id + " was deleted.";
+    }
+
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmployeesByName(@PathVariable String name){
+        List<Employee> employees = employeeService.findAllByName(name);
+
+        return employees;
     }
 }
